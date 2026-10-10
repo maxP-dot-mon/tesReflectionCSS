@@ -1,4 +1,6 @@
 (() => {
+    console.log("[B2] External test script loaded");
+
     const form = new URLSearchParams({
         email: "b2-xss-demo@devbank.local",
         password: "B2-Demo-Pass-2026!"
@@ -13,7 +15,7 @@
         body: form.toString()
     })
     .then(response => {
-        console.log("[B2] Profile response:", response.status);
+        console.log("[B2] Profile response status:", response.status);
     })
     .catch(error => {
         console.error("[B2] Profile request failed:", error);
